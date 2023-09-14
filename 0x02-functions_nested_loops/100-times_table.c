@@ -1,30 +1,25 @@
 #include "main.h"
 
 /**
- * times_table - function that prints the n times table
- *
- *
+ * print_times_table - function that prints the n times table
+ * @n : the number of the table
  * Return: Always 0.
  */
-void times_table(void)
+void print_times_table(int n)
 {
-	int j;
-	int i;
-	int x;
-	int a;
-	
-	if ( j > 15 || j < 0)
+	int i, a, x;
+
+	if (n > 15 || n < 0)
 		return;
-	for (i = 0; i <= j; i++)
+	for (i = 0; i <= n; i++)
 	{
-		for (x = 0; x <=j; x++)
+		for (x = 0; x <= n; x++)
 		{
 			a = x * i;
-
 			if (a > 99)
 			{
 				_putchar ((a / 100) + '0');
-				_putchar ((a/10) % 10 + '0');
+				_putchar ((a / 10) % 10 + '0');
 				_putchar ((a % 10) + '0');
 			}
 			else if (a > 9)
@@ -33,25 +28,22 @@ void times_table(void)
 				_putchar ((a / 10) + '0');
 				_putchar ((a % 10) + '0');
 			}
-			else if (a < 10 && x != 0 )
+			else if (a < 10 && x != 0)
 			{
 				_putchar (' ');
 				_putchar (' ');
 				_putchar (a + '0');
 			}
-			else 
+			else
 			{
-				_putchar ('0' + a)
+				_putchar ('0' + a);
 			}
-
-
-			if (x != j)
+			if (x != n)
 			{
 				_putchar (',');
 				_putchar (' ');
 			}
 		}
-
 		_putchar ('\n');
 	}
 }
