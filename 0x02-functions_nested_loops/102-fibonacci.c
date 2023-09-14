@@ -24,7 +24,7 @@ int main(void)
 			b = sum;
 			sum = a;
 		}
-		else if (i == 49) 
+		else if (i == 49)
 		{
 			sum = a + b;
 			printf("%ld\n", sum);
