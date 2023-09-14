@@ -15,12 +15,24 @@ int main(void)
 
 	for (i = 0; i < 50; i++)
 	{
-		sum = a + b;
-		printf("%ld, ", sum);
+		if (i != 49)
+		{
+			sum = a + b;
+			printf("%ld, ", sum);
 
-		a = b;
-		b = sum;
-		sum = a;
+			a = b;
+			b = sum;
+			sum = a;
+		}
+		else if 
+		{
+			sum = a + b;
+			printf("%ld", sum);
+
+			a = b;
+			b = sum;
+			sum = a;
+		}
 	}
 	return (0);
 }
