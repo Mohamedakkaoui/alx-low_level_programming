@@ -19,13 +19,14 @@ void rev_string(char *s)
 	}
 
 	j = 0;
+	i--;
 
 	while (j < i)
 	{
 		d = s[j];
-		s[j] = s[i - j];
-		s[i - j] = d;
+		s[j] = s[i];
+		s[i] = d;
 		j++;
+		i--;
 	}
-	_putchar ('\n');
 }
