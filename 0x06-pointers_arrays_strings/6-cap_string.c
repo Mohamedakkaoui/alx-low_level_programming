@@ -9,29 +9,28 @@
  */
 char *cap_string(char *a)
 {
-	int i = 0;
+	int index = 0;
 
-	while (a[i])
+	while (str[index])
 	{
-		while (!(a[i] >= 'a' && a[i] <= 'z'))
-			i++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
 
-		if (a[i - 1] == ' ' ||
-		a[i - 1] == '\t' ||
-		a[i - 1] == '\n' ||
-		a[i - 1] == ',' ||
-		a[i - 1] == ';' ||
-		a[i - 1] == '.' ||
-		a[i - 1] == '!' ||
-		a[i - 1] == '?' ||
-		a[i - 1] == '"' ||
-		a[i - 1] == '(' ||
-		a[i - 1] == ')' ||
-		a[i - 1] == '{' ||
-		a[i - 1] == '}' ||
-		i == 0)
-			a[i] -= 32;
-		i++;
+		if (str[index - 1] == ' ' ||
+		str[index - 1] == '\t' ||
+		str[index - 1] == '\n' ||
+		str[index - 1] == ',' ||
+		str[index - 1] == ';' ||
+		str[index - 1] == '.' ||
+		str[index - 1] == '!' ||
+		str[index - 1] == '?' ||
+		str[index - 1] == '"' ||
+		str[index - 1] == '(' ||
+		str[index - 1] == ')' ||
+		str[index - 1] == '{' ||
+		str[index - 1] == '}' ||
+		index == 0)
+			str[index] -= 32;
+		index++;
 	}
-	return (a);
-}
+	return (str);
