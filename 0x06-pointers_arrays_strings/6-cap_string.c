@@ -7,7 +7,7 @@
  *
  * Return: Always 0.
  */
-char *cap_string(char *a)
+char *cap_string(char *str)
 {
 	int index = 0;
 
@@ -34,3 +34,4 @@ char *cap_string(char *a)
 		index++;
 	}
 	return (str);
+}
