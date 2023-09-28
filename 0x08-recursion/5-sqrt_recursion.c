@@ -7,6 +7,9 @@
  *
  * Return: Always 0.
  */
+
+int sqrt_recu(int a, int i);
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
