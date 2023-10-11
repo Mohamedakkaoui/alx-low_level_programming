@@ -1,19 +1,20 @@
-#ifndef _DOG_H
-#define _DOG_H
+#ifndef _DOG_H_
+#define _DOG_H_
 
 /**
- * dog_t - typedef for struct dog
+ * dog_t - Typedef for struct dog
  */
 
 typedef struct dog dog_t;
 
 /**
- * struct dog - strcut dog
- * @name :  name of dog
- * @age : age of the dog
- * @owner : owner of the dog
+ * struct dog - struct of a dog
  *
- * description : descp struct of a dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * Description: description
  */
 struct dog
 {
