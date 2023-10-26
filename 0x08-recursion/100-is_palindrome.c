@@ -22,6 +22,27 @@ int comparing(char *s, int i, int j)
 	return (comparing(s, i + 1, j - 1));
 }
 /**
+ * length - funcion that calculates the length of a string
+ *
+ * @s : as string
+ *
+ * Return: the length of the string.
+ */
+int length(char *s)
+{
+	int i = 0;
+
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		i++;
+	}
+	return (i + length(s + 1));
+}
+/**
  * is_palindrome - function that checks if a string is palindrome
  *
  * @s : a string
@@ -33,11 +54,7 @@ int is_palindrome(char *s)
 	int i = 0;
 	int j = 0;
 
-	while (s[j] != '\0')
-	{
-		j++;
-	}
+	j = length(s);
 
 	return (comparing(s, i, j - 1));
 }
-
