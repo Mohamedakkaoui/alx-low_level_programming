@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int  result, i, j;
 
-	result = 0;	
+	result = 0;
 	if (argc == 1)
 	{
 		printf("0\n");
@@ -37,4 +37,4 @@ int main(int argc, char *argv[])
 	}
 		printf("%d\n", result);
 		return (0);
-} 
+}
