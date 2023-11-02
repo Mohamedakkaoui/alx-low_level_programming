@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= j)
 	{
-		for (y = 0; y < j; y++)
+		for (y = 0; y < j + 1; y++)
 		{
 			string[x + y] = s2[y];
 		}
