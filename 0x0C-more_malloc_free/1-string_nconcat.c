@@ -27,10 +27,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		;
 	}
-	if (n >= j)
-	{
-		n = j;
-	}
 	string = (char *)malloc(sizeof(char) * (i + n + 1));
 	if (string == NULL)
 	{
@@ -42,17 +38,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= j)
 	{
-		for (y = 0; y < j + 1; y++)
+		for (y = 0; y < j; y++)
 		{
 			string[x + y] = s2[y];
 		}
 	}
 	else
 	{
-		for (y = 0; y <= n; y++)
+		for (y = 0; y < n; y++)
 		{
 			string[x + y] = s2[y];
 		}
 	}
+	string[x + y] = '\0';
 	return (string);
 }
