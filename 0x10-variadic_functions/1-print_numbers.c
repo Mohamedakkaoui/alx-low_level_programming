@@ -23,17 +23,17 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			if (separator != NULL)
 			{
-				printf("%u", x);
+				printf("%d", x);
 				printf("%s", separator);
 			}
 			else
 			{
-				printf("%u", x);
+				printf("%d", x);
 			}
 		}
 		else
 		{
-			printf("%u\n", x);
+			printf("%d\n", x);
 		}
 	}
 	va_end(print);
