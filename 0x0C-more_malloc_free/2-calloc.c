@@ -9,7 +9,6 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *array;
 	unsigned int i;
 	char *chararray;
 
@@ -17,15 +16,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	array = malloc(size * nmemb);
-	if (array == NULL)
+	chararray = malloc(size * nmemb);
+	if (chararray == NULL)
 	{
 		return (NULL);
 	}
-	chararray = (char *)array;
 	for (i = 0; i < nmemb; i++)
 	{
 		chararray[i] = 0;
 	}
-	return (array);
+	return (chararray);
 }
