@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		string[x] = s1[x];
 	}
-	if (n > j)
+	if (n >= j)
 	{
 		for (y = 0; y < j; y++)
 		{
@@ -39,9 +39,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 	}
 	else
+	{
 		for (y = 0; y < n; y++)
 		{
 			string[x + y] = s2[y];
 		}
+	}
 	return (string);
 }
